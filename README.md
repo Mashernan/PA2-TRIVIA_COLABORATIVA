@@ -14,4 +14,4 @@ Este es un proyecto simple de trivia en JavaScript, ideal para practicar DOM, es
 2. En el menú lateral izquierdo, haz clic en **Pages**.
 3. En **Source**, selecciona la rama `main` y carpeta `/ (root)`.
 4. Haz clic en "Save".
-5. Espera unos segundos y visita la URL que aparece (será algo como: `https://tuusuario.github.io/trivia-colaborativa`)
+5. Espera unos segundos y visita la URL que aparece (será algo como: `https://mashernan.github.io/PA2-TRIVIA_COLABORATIVA`)
