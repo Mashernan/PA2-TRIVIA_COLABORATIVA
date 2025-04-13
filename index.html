@@ -1,16 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Trivia Colaborativa</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Interactivo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <h1>🎯 Trivia Colaborativa</h1>
+  <div class="quiz-container">
+        <div id="progress-bar-container"><div id="progress-bar"></div></div>
+        <h1>🎯 Trivia Colaborativa</h1>
     <div id="question-container"></div>
-    <button id="next-btn">Siguiente pregunta</button>
+    
+    <button id="next-btn">Siguiente Pregunta</button>
+    <div id="score-container"></div>
+    
+    <!-- Sonidos -->
+    <audio id="correct-sound" src="sounds/correct.mp3"></audio>
+    <audio id="wrong-sound" src="sounds/wrong.mp3"></audio>
   </div>
 
   <script src="script.js"></script>
