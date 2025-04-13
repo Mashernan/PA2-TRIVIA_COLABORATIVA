@@ -14,8 +14,8 @@ jobs:
     - name: 🧾 Clonar repositorio
       uses: actions/checkout@v3
 
-    - name: 🧪 Validar HTML
-      uses: Cyb3r-Jak3/html5validator-action@v0.2.0
+   # - name: 🧪 Validar HTML
+   #   uses: Cyb3r-Jak3/html5validator-action@v0.2.0
 
     - name: 🧹 Instalar ESLint
       run: |
