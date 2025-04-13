@@ -4,13 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Trivia Colaborativa</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
     <h1>🎯 Trivia Colaborativa</h1>
-    <div id="question-container"></div>
-    <button id="next-btn">Siguiente pregunta</button>
+
+    <div id="start-screen">
+      <label for="player-name" class="name-label">Ingresa tu nombre:</label>
+      <input type="text" id="player-name" placeholder="Tu nombre aquí">
+      <button id="start-btn">Comenzar Trivia</button>
+    </div>
+
+    <div id="trivia" style="display: none;">
+      <div class="score-bar">
+        Puntaje: <span id="score">0</span>
+      </div>
+      <div id="question-container"></div>
+      <button id="next-btn" disabled>Siguiente pregunta</button>
+    </div>
+
+    <div id="end-screen" style="display: none;">
+      <h2>🎉 ¡Trivia finalizada!</h2>
+      <p id="final-message"></p>
+      <button onclick="location.reload()">Volver a jugar</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
