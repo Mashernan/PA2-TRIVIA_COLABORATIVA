@@ -1,28 +1,31 @@
 body {
     font-family: Arial, sans-serif;
-    background: #f0f4f8;
+    background: url('https://source.unsplash.com/1600x900/?space,stars') no-repeat center center fixed;
+    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
-  }
-  
-  .container {
-    background: white;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.9);
     padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     width: 90%;
     max-width: 500px;
-  }
-  
-  h1 {
     text-align: center;
+}
+
+h1 {
+    font-size: 1.8rem;
     margin-bottom: 1rem;
-  }
-  
-  button {
+    color: #34495e;
+}
+
+button {
     background-color: #3498db;
     color: white;
     border: none;
@@ -30,13 +33,15 @@ body {
     font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  button:hover {
+    transition: transform 0.2s ease, background-color 0.3s;
+}
+
+button:hover {
     background-color: #2980b9;
-  }
-  
-  .answer-btn {
+    transform: scale(1.05);
+}
+
+.answer-btn {
     display: block;
     margin: 0.5rem 0;
     width: 100%;
@@ -45,75 +50,83 @@ body {
     border: 1px solid #ccc;
     cursor: pointer;
     border-radius: 4px;
-  }
-  
-  .answer-btn.correct {
+    transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.answer-btn:hover {
+    background-color: #d5dbdb;
+    transform: scale(1.03);
+}
+
+.answer-btn.correct {
     background-color: #2ecc71;
     color: white;
-  }
-  
-  .answer-btn.incorrect {
+}
+
+.answer-btn.incorrect {
     background-color: #e74c3c;
     color: white;
+}
 
-    .score-bar {
-        text-align: center;
-        font-weight: bold;
-        margin-bottom: 1rem;
-        font-size: 1.2rem;
-        color: #2c3e50;
-      }
-      #start-screen, #end-screen {
-        text-align: center;
-      }
-      
-      #player-name {
-        padding: 0.5rem;
-        font-size: 1rem;
-        margin: 1rem 0;
-        width: 80%;
-        max-width: 300px;
-      }
-      #start-screen {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-        padding: 1rem;
-      }
-      
-      .name-label {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #2c3e50;
-      }
-      
-      #player-name {
-        padding: 0.7rem 1rem;
-        font-size: 1rem;
-        border: 2px solid #3498db;
-        border-radius: 8px;
-        outline: none;
-        width: 100%;
-        max-width: 300px;
-        transition: box-shadow 0.3s ease;
-      }
-      
-      #player-name:focus {
-        box-shadow: 0 0 5px #3498db;
-      }
-      
-      #start-btn {
-        background-color: #27ae60;
-        color: white;
-        border: none;
-        padding: 0.7rem 1.5rem;
-        font-size: 1rem;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      
-      #start-btn:hover {
-        background-color: #219150;
-      }
-  }
+.score-bar {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+
+/* Estilos para la pantalla de inicio */
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+#start-screen::before {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 150px;
+    background: url('https://media.giphy.com/media/5Zesu5VPNGJlm/giphy.gif') center center / cover;
+    border-radius: 10px;
+}
+
+.name-label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+#player-name {
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    outline: none;
+    width: 100%;
+    max-width: 300px;
+    transition: box-shadow 0.3s ease;
+}
+
+#player-name:focus {
+    box-shadow: 0 0 5px #3498db;
+}
+
+#start-btn {
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#start-btn:hover {
+    background-color: #219150;
+    transform: scale(1.05);
+}
