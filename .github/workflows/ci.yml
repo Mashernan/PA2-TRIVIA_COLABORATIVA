@@ -14,21 +14,20 @@ jobs:
     - name: 🧾 Clonar repositorio
       uses: actions/checkout@v3
 
-   # - name: 🧪 Validar HTML
-   #   uses: Cyb3r-Jak3/html5validator-action@v0.2.0
-
-    - name: 🧹 Instalar ESLint
+    - name: 📦 Instalar dependencias necesarias
       run: |
-        npm install eslint -g
+        npm install -g htmlhint
 
-    - name: 🧪 Ejecutar ESLint
+    - name: 🧪 Validar HTML con HTMLHint
       run: |
-        eslint script.js || true
+        htmlhint index.html || true
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+    if: >
+      (github.actor == 'TU_USUARIO' || github.actor == 'COLABORADOR1')
+      && github.ref == 'refs/heads/main'
 
     steps:
     - name: ⬇️ Clonar repositorio
@@ -39,3 +38,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./
+
