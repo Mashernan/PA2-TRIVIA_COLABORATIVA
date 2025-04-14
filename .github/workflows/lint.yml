@@ -1,0 +1,6 @@
+git checkout -b dev
+mkdir -p .github/workflows
+# Copia el archivo lint.yml al directorio .github/workflows/
+git add .
+git commit -m "Agregar CI/CD con lint y deploy a GitHub Pages"
+git push origin dev
