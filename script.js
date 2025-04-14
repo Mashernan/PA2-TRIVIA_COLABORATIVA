@@ -7,7 +7,7 @@ const questions = [
     { question: "¿Cuál es el planeta más grande del sistema solar?", answers: ["Tierra", "Saturno", "Júpiter", "Urano"], correct: 2 },
     { question: "¿Qué país ganó el Mundial de Fútbol 2022?", answers: ["Argentina", "Francia", "Brasil", "Alemania"], correct: 0 },
     { question: "¿Cuántos huesos tiene el cuerpo humano adulto?", answers: ["206", "210", "195", "183"], correct: 0 },
-    { question: "¿Qué instrumento tiene elementos como teclas, cuerdas y martillos?", answers: ["Guitarra", "Piano", "Violín", "Arpa"], correct: 1 }
+    { question: "¿Qué instrumento tiene teclas, cuerdas y martillos?", answers: ["Guitarra", "Piano", "Violín", "Arpa"], correct: 1 }
 ];
 
 let currentIndex = 0;
