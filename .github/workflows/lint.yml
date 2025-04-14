@@ -1,6 +1,26 @@
-git checkout -b dev
-mkdir -p .github/workflows
-# Copia el archivo lint.yml al directorio .github/workflows/
-git add .
-git commit -m "Agregar CI/CD con lint y deploy a GitHub Pages"
-git push origin dev
+name: Lint Code
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main, dev]
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npx eslint script.js
